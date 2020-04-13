@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uppercase Sentences WebSocket</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/comms.js" defer></script>
+        <script type="text/javascript" src="js/submitsentence.js" defer>
+        </script>
+        <script type="text/javascript" src="js/webSocketClient.js" defer>
+        </script>        
+        <script type="text/javascript" src="js/app.js" defer></script>
+    </head>
+    <body>
+        <div>
+                <h2>Sentences : </h2>
+<!--                This list is updated in the function retrieveSentences()-->
+                <ul id="sentences"></ul>
+        </div>
+        <div>
+<!--            A listener to this form is added as:
+            
+                let submitForm = document.getElementById("submitsentence");
+                submitForm.onsubmit = async (e) => { 
+                                                     //code
+                                                   }-->
+            <form id="submitsentence">
+                New message:<input type="text" id="inputsentenceid" 
+                                   name="content" size=10 required>
+                <input type=submit value="Submit sentence">
+            </form>
+
+        </div>
+
+<!--        We call retrieveSentences() so current sentences 
+            are shown after loading the html page-->        
+<!--        <script>
+                window.addEventListener("load", 
+                                        function(){retrieveSentences ();});
+        </script>        -->
+    </body>
+</html>
